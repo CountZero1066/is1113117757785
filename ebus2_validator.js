@@ -1,27 +1,42 @@
-/* global $ */
+/*global $*/
 
-function validateDetails(){
-    
-    var pin;
-    
-    pin = document.getElementById("user_pin").value;
-    
-    if (pin == ""){
-        alert("Please enter your PIN");
-    }
-    else if (String(pin).length < 4){
-        alert("Please make sure your PIN is accurate");
-    }
-    else{
-        enablebtnPurchase();
+function calcSub(){
+
+var argSubTotal;
+
+if (document.getElementById('salesforce').checked) {
+    argSubTotal=100;
     }
     
+    else if (document.getElementById('cloud9').checked) {
+	argSubTotal=200;
+	}
+	
+    else if (document.getElementById('aws').checked) {
+    argSubTotal=300;
+    }
+    
+	else{
+	argSubTotal=400;
+	}
+	
+    
+    display(argSubTotal);
 }
 
-function enablebtnPurchase(){
-    $('#btnPurchase').prop('disabled', false);
+function display(parm1){
+    
+    document.getElementById("subtotal").value = parm1;
+    document.getElementById("total").value = parm1;
+    
+    enablebtnProceed();
 }
 
-function disablebtnPurchase() {
-    $('#btnPurchase').prop('disabled', true);
+
+function enablebtnProceed(){
+    $('#btnProceed').prop('disabled', false);
+}
+
+function disabledbtnProceed(){
+    $('#btnProceed').prop('disabled', true);
 }
