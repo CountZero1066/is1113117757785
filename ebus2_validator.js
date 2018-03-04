@@ -20,6 +20,10 @@ if (document.getElementById('salesforce').checked) {
 	argSubTotal=400;
 	}
 	
+   document.getElementById("subtotal").value = argSubTotal;
+    document.getElementById("total").value = argSubTotal;
+    
+    enablebtnProceed();
     
     display(argSubTotal);
 }
