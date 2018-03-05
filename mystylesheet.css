@@ -8,6 +8,9 @@ html,body{
   background-size: cover;                      
    
     background-position: center center;
+    overflow:auto;
+    margin:0 !important;
+  padding:0 !important;
 }
 .mainbody{
   z-index: 20;
@@ -400,22 +403,38 @@ table{
 
 .imgContainer{
   position: relative;
-  
+  margin-left: 1%;
+  margin-bottom: 1%;
+  border-width: 1px;
+  border-style: solid;
     float:left;
+  opacity: .5;
+    
 }
 
-.image123{
+.images{
   position: absolute;
   top: 30%;
-  opacity: .95;
+  
+  
 }
 
-.image123 h1{
-  color: #757575;
+
+
+.images h1{
+  color: #FBC02D;
   text-decoration: underline;
   text-shadow: 4px 1px black;
   font-family:verdana;
 }
+
+.imgContainer:hover{
+  background:#c62828;
+  color:#F4511E;
+	
+  opacity: 1;
+  transition: all 0.8s ease-out;
+}	
 
 #splashscreen {
     position: fixed;  
@@ -488,5 +507,353 @@ table{
   position: absolute;
 }
 
+#Cloud_Title{
+		top:0%;
+		left:0%;
+		width:100%;
+		height:21%;
+		position:absolute;
+		background:#455A64;
+		text-align: center;
+		
+		font-family:verdana;
+  background-image: url("http://jonvilma.com/images/cloud-11.jpg");
+  background-repeat: no-repeat;
+
+  
+  background-size:  cover;     
+		font-family: Arial;
+  color: #B3E5FC;
+  font-size: 40px;
+		}
+		
+		#Title
+		{
+			top: 20%;
+			left: 40%;
+			width: 35%;
+			height: 80%;
+			position: absolute;	
+			
+			z-index:10;
+			
+		}
+#Title img{
+  position: absolute;
+  
+    float:left;
+  left: -110%;
+  border:none;
+}
+
+#menu {
+			top:21%;
+			left:0%;
+			width:100%;
+      margin: auto;
+
+			position:Absolute;
+			background:#554E4D;
+			
+			z-index:4;
+		}
+
+#menu ul {
+		list-style: none;
+		float: left;
+	
+		}
+		#menu ul {
+			margin-left: 25%;
+		}
+
+		#menu li {
+			position: relative;
+			z-index: 9;
+			margin-top: 2px;
+			padding: 0 0px 0 0;
+			display: block;
+			float: left;
+		}
+		#menu a{
+		text-decoration:none;
+		color:white;
+		font-family:Verdana;
+		margin-right:40px;
+		}
+		
+		#menu a:hover{
+		background:#0066cc;
+		color:#FFFFFF;
+		padding:10px;
+		
+		-moz-border-radius: 1em 1em 1em 1em;
+		border-radius: 1em 1em 1em 1em;
+		}
 
 
+
+
+
+
+
+.cloudhead{
+  position: absolute;
+  top:27%;
+  width:100%;
+		height:21%;
+  	background-color:#212121;
+  margin-left: 0%;
+}
+.cloudhead h1{
+  text-align: center;
+  font-size: 40px;
+ font-family: Arial;
+  color: #FAFAFA;
+}
+  .cloudcontentwhite{
+     position: absolute;
+  top:48%;
+  width:100%;
+		height:100%;
+  	background-color:#FAFAFA;
+  margin-left: 0%;
+    
+}
+
+.cloudcontentwhite h2{
+  font-size: 30px;
+ font-family: Arial;
+  color: #212121;
+  text-align: center;
+  
+}
+
+.card{
+  width: 200px;
+  position: relative;
+  margin-left: 12%;
+  margin-bottom: 10%;
+  border-width: 1px;
+  padding-left: 10px;
+   padding-top: 20px;
+    float:left;
+}
+
+.meettheteam{
+  
+}
+.whoweare{
+  align-content:center;
+  text-align: center;
+   font-size: 15px;
+  font-family: Arial;
+  color: #212121;
+}
+  
+.cloudcontentblack{
+     position: absolute;
+  top:98%;
+  width:100%;
+		height:100%;
+  	background-color:#212121;
+  margin-left: 0%;
+  
+    
+}
+
+.cloudcontentblack h2{
+  font-size: 30px;
+ font-family: Arial;
+  color: white;
+  text-align: center;
+  
+}
+.cloudcontentblack p{
+  font-family: Arial;
+  color: white;
+   text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.cloudcontentblack img{
+  position: absolute;
+  margin: auto;
+    left: 0; 
+    right: 0;
+  
+    bottom: 90px;
+}
+
+.contactus{
+     position: absolute;
+  top:198%;
+  width:100%;
+		height:60%;
+  	background-color:#F5F5F5;
+  margin-left: 0%;
+  
+    
+}
+
+.facelink{
+  position: absolute;
+  top:20%;
+  left: 55%;
+  transition: all .4s ease-in-out;
+}
+.twitlink{
+  position: absolute;
+  top:20%;
+  left: 25%;
+  transition: all .4s ease-in-out;
+}
+
+.contactus h1{
+    text-align: center;
+  font-family:verdana;
+  margin-right:30px;
+}
+
+.twitlink :hover{
+  transform: scale(1.1);
+}
+
+.facelink :hover{
+  transform: scale(1.1);
+}
+
+.SAAS{
+     position: absolute;
+  top:27%;
+  width:100%;
+		height:70%;
+  	background-color:#212121;
+  margin-left: 0%;
+  opacity: 0.7;
+    font-family: Arial;
+  color: white;
+}
+
+.SAAS h1{
+  font-size: 30px;
+ font-family: Arial;
+  color: white;
+  text-align: center;
+  
+}
+.SAAS img{
+   float: right;
+transition: all .4s ease-in-out;
+}
+
+.SAAS img:hover{
+  transform: scale(1.1);
+}
+
+.SAAS p{
+  margin:2% 2%;
+  position:relative
+   
+  
+}
+
+
+.PAAS{
+    position: absolute;
+  top:97%;
+  width:100%;
+		height:70%;
+  	background-color:white;
+  margin-left: 0%;
+  opacity: 0.7;
+    font-family: Arial;
+  color: black;
+}
+
+.PAAS h1{
+  font-size: 30px;
+ font-family: Arial;
+  color: black;
+  text-align: center;
+  
+}
+.PAAS img{
+   float: left;
+   transition: all .4s ease-in-out;
+}
+
+.PAAS img:hover{
+  transform: scale(1.1);
+}
+
+.PAAS p{
+  margin:2% 2%;
+  position:relative
+}   
+    .IAAS{
+    position: absolute;
+  top:167%;
+  width:100%;
+		height:70%;
+  	background-color:black;
+  margin-left: 0%;
+  opacity: 0.7;
+    font-family: Arial;
+  color: white;
+}
+
+.IAAS h1{
+  font-size: 30px;
+ font-family: Arial;
+  color: white;
+  text-align: center;
+  
+}
+.IAAS img{
+   float: right;
+transition: all .4s ease-in-out;
+}
+
+.IAAS img:hover{
+  transform: scale(1.1);
+}
+
+.IAAS p{
+  margin:2% 2%;
+  position:relative
+}
+
+.CAAS{
+    position: absolute;
+  top:237%;
+  width:100%;
+		height:50%;
+  	background-color:white;
+  margin-left: 0%;
+  opacity: 0.7;
+    font-family: Arial;
+  color: black;
+}
+
+.CAAS h1{
+  font-size: 30px;
+ font-family: Arial;
+  color: black;
+  text-align: center;
+  
+}
+.CAAS img{
+   float: left;
+   transition: all .4s ease-in-out;
+}
+
+.CAAS img:hover{
+  transform: scale(1.1);
+}
+
+.CAAS p{
+  margin:2% 2%;
+  position:relative
+}   
