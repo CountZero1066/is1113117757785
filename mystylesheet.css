@@ -905,3 +905,23 @@ transition: all .4s ease-in-out;
 .heroku img:hover{
   transform: scale(1.1);
 }
+
+
+.ebuscontainer{
+  position: absolute;
+  top: 30%;
+  left:44%;
+  background-color: white;
+  font-family: arial;
+  font-size:20px;
+}
+
+.ebuscontainer h2{
+  text-align: center;
+}
+.ebuscontainer input {
+        width: 100%;
+        clear: both;
+  
+}
+

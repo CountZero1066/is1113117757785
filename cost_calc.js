@@ -1,32 +1,58 @@
 /* global $ */
 
-function calcSub(){
+function calcSub() {
     
     var argSubTotal;
     
     if(document.getElementById('salesforce').checked) {
-      argSubTotal = 100;
+        argSubTotal = 100;
+    }
+    else if (document.getElementById('aws').checked) {
+        argSubTotal = 300;
+    }
+    else if (document.getElementById('cloud9').checked) {
+        argSubTotal = 200;
     }
     else {
-      argSubTotal = 300;
+        argSubTotal = 400;
     }
     
-    display(argSubTotal);
-}
+    
+    calcDisVatTotal(argSubTotal);
+    
+    
+}//End of calcSub()
 
-function display(parm1){
-  
-  document.getElementById("subtotal").value = parm1;
-  document.getElementById("total").value = parm1;
-        
-  enablebtnProceed();
-}
+function calcDisVatTotal(parmSubTotal) {
+    
+    var discountAmt = parmSubTotal * 0.05;
+    var tempPrice = parmSubTotal - discountAmt;
+    var vatAmt = tempPrice * 0.10;
+    var totalPrice = tempPrice + vatAmt;
+    
+    display(parmSubTotal, discountAmt, vatAmt, totalPrice);
+    
+}//End of calcDisVatTotal()
+
+
+function display(parm1, parm2, parm3, parm4){
+    
+    document.getElementById("subtotal").value = parm1;
+    document.getElementById("discount").value = parm2;
+    document.getElementById("vat").value = parm3;
+    document.getElementById("total").value = parm4;
+    
+    enablebtnProceed();
+}//End of display()
 
 
 function enablebtnProceed(){
-    $('#btnProceed').prop('disabled', false);
-}
+    $('#btnproceed').prop('disabled', false);
+}//End of enablebtnProceed()
+
 
 function disablebtnProceed() {
-    $('#btnProceed').prop('disabled', true);
-}
+    $('#btnproceed').prop('disabled', true);
+}//End of disablebtnProcees()
+
+

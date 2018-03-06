@@ -1,46 +1,35 @@
-/*global $*/
+/* global $ */
 
-function calcSub(){
-
-var argSubTotal;
-
-if (document.getElementById('salesforce').checked) {
-    argSubTotal=100;
+function validateDetails(){
+    
+    var pin;
+    var name;
+    var email;
+    
+    pin = document.getElementById("user_pin").value;
+    name = document.getElementById("name").value;
+    email = document.getElementById("email").value;
+    
+    if (pin == ""  || name == "" || email == "") {
+        
+        alert("Please ensure all fields have been filled.");
+    }
+    else if (String(pin).length < 4){
+        
+        alert("Please make sure your PIN is accurate");
+    }
+    else{
+        enablebtnPurchase();
     }
     
-    else if (document.getElementById('cloud9').checked) {
-	argSubTotal=200;
-	}
-	
-    else if (document.getElementById('aws').checked) {
-    argSubTotal=300;
-    }
     
-	else{
-	argSubTotal=400;
-	}
-	
-   document.getElementById("subtotal").value = argSubTotal;
-    document.getElementById("total").value = argSubTotal;
     
-    enablebtnProceed();
-    
-    display(argSubTotal);
-}
+}//End of validateDetails()
 
-function display(parm1){
-    
-    document.getElementById("subtotal").value = parm1;
-    document.getElementById("total").value = parm1;
-    
-    enablebtnProceed();
-}
+function enablebtnPurchase(){
+    $('#btnPurchase').prop('disabled', false);
+}//End of enablebtnPurchase()
 
-
-function enablebtnProceed(){
-    $('#btnProceed').prop('disabled', false);
-}
-
-function disabledbtnProceed(){
-    $('#btnProceed').prop('disabled', true);
-}
+function disablebtnPurchase() {
+    $('#btnPurchase').prop('disabled', true);
+}//End of disablebtnPurchase()
