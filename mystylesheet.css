@@ -678,12 +678,31 @@ table{
 }
 
 .cloudcontentblack img{
+    display: block;
+    margin: 0 auto;
+}
+
+.cloudcontentblack button{
   position: absolute;
-  margin: auto;
-    left: 0; 
-    right: 0;
-  
-    bottom: 90px;
+  width: 40%;
+left: 30%;
+
+  border-radius: 4px;
+  background-color: #1E88E5;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+    
+  cursor: pointer;
+  margin: 5px;
+  transition: all .4s ease-in-out;
+}
+
+.cloudcontentblack button:hover{
+  background-color: #4FC3F7;
+   transform: scale(1.1);
 }
 
 .contactus{
@@ -925,3 +944,27 @@ transition: all .4s ease-in-out;
   
 }
 
+.section {
+    /* the important one*/
+    background-attachment: fixed; 
+ 
+    background-size: auto 80%;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+}
+
+#section1 {
+    background-image: url(imgs/h1.jpg);
+}
+#section2 {
+    background-image: url(imgs/h2.jpg);
+}
+#section3 {
+    background-image: url(imgs/h3.jpg);
+}
+
+#section4 .content {
+    top: 100%;
+    position: absolute;
+    left: 0;
+}
